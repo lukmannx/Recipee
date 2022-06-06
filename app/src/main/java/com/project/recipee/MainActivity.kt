@@ -2,7 +2,7 @@ package com.project.recipee
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.project.recipee.R
+import com.lukman.recipee.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
