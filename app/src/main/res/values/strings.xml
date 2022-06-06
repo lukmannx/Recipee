@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Recipee</string>
+    <string name="search">search</string>
 </resources>
