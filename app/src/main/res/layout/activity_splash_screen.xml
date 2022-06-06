@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.splashscreen.SplashScreen">
+
+    <TextView
+        android:id="@+id/title_android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Android Studio"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:fontFamily="@font/fredokaone_regular"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"/>
+
+    <ImageView
+        android:id="@+id/android"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/android"
+        android:layout_gravity="center"/>
+
+    <ImageView
+        android:layout_width="357dp"
+        android:layout_height="275dp"
+        android:src="@drawable/gambar"
+        android:layout_gravity="center"
+        android:layout_marginTop="110dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recipe"
+        android:textAlignment="center"
+        android:textSize="45dp"
+        android:fontFamily="@font/fredokaone_regular"
+        android:textColor="@color/black"
+        android:layout_marginTop="90dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Final Project"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/fredokaone_regular"
+        android:textColor="@color/black"/>
+
+
+</LinearLayout>
