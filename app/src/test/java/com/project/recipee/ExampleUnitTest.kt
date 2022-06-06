@@ -1,4 +1,4 @@
-package com.lukman.recipee
+package com.project.recipee
 
 import org.junit.Test
 
