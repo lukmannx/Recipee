@@ -35,12 +35,12 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:fontFamily="@font/fredokaone_regular"
         android:text="Recipe"
         android:textAlignment="center"
-        android:textSize="45dp"
-        android:fontFamily="@font/fredokaone_regular"
         android:textColor="@color/black"
-        android:layout_marginTop="90dp"/>
+        android:textSize="45dp" />
 
     <TextView
         android:layout_width="match_parent"
