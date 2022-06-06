@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Recipee">
         <activity
-            android:name=".ui.splashscreen.SplashScreen"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.splashscreen.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
