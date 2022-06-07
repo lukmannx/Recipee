@@ -7,8 +7,8 @@
         android:title="Home" />
 
     <item
-        android:id="@+id/navigation_profile"
-        android:icon="@drawable/ic_account"
-        android:title="Profile"/>
+        android:id="@+id/navigation_saved"
+        android:icon="@drawable/ic_saved"
+        android:title="Saved"/>
 
 </menu>
