@@ -10,9 +10,9 @@
                 <shape>
                     <padding android:bottom="5dp"/>
                     <gradient
-                        android:startColor="@color/white"
-                        android:endColor="@color/white"
-                        android:angle="270" />
+                        android:startColor="#ffffff"
+                        android:endColor="#E6E5E8"
+                        android:angle="200" />
                     <corners
                         android:radius="19dp"/>
                     <padding
