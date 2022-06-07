@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Recipee</string>
+    <string name="email_account">Email</string>
+    <string name="full_name">Nama Panjang</string>
+    <string name="No_telp">No.Telp</string>
+    <string name="pass_word">Password</string>
+    <string name="updatee">Update</string>
 </resources>
