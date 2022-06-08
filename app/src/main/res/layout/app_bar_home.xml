@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="100dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/rounded_bottom_appbar">
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="10dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -26,7 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="HI Faiq"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textSize="25sp"/>
 
@@ -35,9 +36,9 @@
                 android:layout_height="wrap_content"
                 android:text="What do you want to cook?"
                 android:layout_marginTop="10dp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textStyle="normal"
-                android:textSize="17sp"/>
+                android:textSize="15sp"/>
         </LinearLayout>
 
         <ImageButton
@@ -51,4 +52,4 @@
             android:layout_marginEnd="30dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</com.google.android.material.appbar.AppBarLayout>
+</androidx.cardview.widget.CardView>

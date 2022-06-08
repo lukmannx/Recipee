@@ -4,11 +4,23 @@
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
+    // yoi mass
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFF</color>
     <color name="transparent">#00FFFFFF</color>
+
+    //Nambah
     <color name="cream">#F5DF99</color>
     <color name="Crema">#5FD068</color>
     <color name="coklat">#FFDAAF</color>
+
+    //Home
+    <color name="Hijau">#98DED3</color>
+    <color name="krem">#F0E3C4</color>
+    <color name="pink">#ECCFD1</color>
+    <color name="redd">#DE5B7B</color>
+
+
+
 </resources>
