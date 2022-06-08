@@ -1,10 +1,13 @@
 package com.project.recipee.data.network
 
 import com.project.recipee.BuildConfig
-import com.project.recipee.data.response.RandomResponse
 import com.project.recipee.data.response.SearchResponse
+import retrofit2.Response
 import retrofit2.http.GET
+import retrofit2.http.Path
 import retrofit2.http.Query
+import retrofit2.http.QueryMap
+import java.nio.channels.spi.AbstractSelectionKey
 
 interface ApiService {
 
@@ -20,5 +23,5 @@ interface ApiService {
     fun getRandom(
         @Query("number") number: Int = 30,
         @Query("apiKey") apiKey: String = BuildConfig.API_KEY
-    ): RandomResponse
+    )
 }

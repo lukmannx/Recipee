@@ -1,6 +1,5 @@
-package com.project.recipee.data.network
-
 import com.project.recipee.BuildConfig
+import com.project.recipee.data.network.ApiService
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

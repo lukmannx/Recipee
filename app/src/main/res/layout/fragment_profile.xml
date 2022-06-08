@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.FragmentProfile">
+    tools:context=".ui.ProfilFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -35,17 +35,17 @@
 
             <ImageView
                 android:id="@+id/img_profile"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
                 android:layout_marginTop="20dp"
-                android:src="@drawable/ic_account" />
+                android:src="@drawable/profile_photo" />
 
             <TextView
                 android:id="@+id/txt_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="20dp"
                 android:layout_toEndOf="@id/img_profile"
                 android:fontFamily="@font/poppins_bold"
                 android:includeFontPadding="false"
@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/txt_name"
                 android:layout_centerVertical="true"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginBottom="20dp"
                 android:layout_toEndOf="@id/img_profile"
                 android:text="Halo Saya Software Egineering"
@@ -91,7 +91,7 @@
                     android:drawableStart="@drawable/ic_account"
                     android:drawablePadding="10dp"
                     android:fontFamily="@font/fredokaone_regular"
-                    android:text="Lukman"
+                    android:text="Lukman Chulley"
                     android:textSize="15sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -115,7 +115,7 @@
                     android:drawableStart="@drawable/ic_baseline_email_24"
                     android:drawablePadding="10dp"
                     android:fontFamily="@font/fredokaone_regular"
-                    android:text="lukmanganteng@gmail.com"
+                    android:text="lukmanchulley@gmail.com"
                     android:textSize="15sp" />
 
 
@@ -162,7 +162,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/transparent"
-                    android:drawableStart="@drawable/ic_phone"
+                    android:drawableStart="@drawable/ic_password"
                     android:drawablePadding="10dp"
                     android:fontFamily="@font/fredokaone_regular"
                     android:text="*********"
@@ -172,6 +172,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
+
                 android:id="@+id/btn_up"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -179,6 +180,21 @@
                 android:hint="@string/updatee"
                 android:padding="15dp"
                 android:textColorHint="@color/black" />
+
         </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:fontFamily="@font/fredokaone_regular"
+            android:textColor="@color/black"
+
+            android:text="ABOUT"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 </ScrollView>
