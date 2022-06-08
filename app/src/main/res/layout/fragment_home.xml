@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.HomeFragment">
+    tools:context=".ui.home.HomeFragment">
 
     <include
         android:id="@+id/include_app_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        layout="@layout/app_bar_main"/>
+        tools:layout="@layout/app_bar_main"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_search_bar"
