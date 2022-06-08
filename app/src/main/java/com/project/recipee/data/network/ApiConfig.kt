@@ -30,6 +30,7 @@ class ApiConfig {
         return Retrofit.Builder()
             .baseUrl(BuildConfig.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
+            .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
             .client(okHttpClient)
             .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
             .build()
