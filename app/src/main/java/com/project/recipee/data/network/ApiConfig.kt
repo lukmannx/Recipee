@@ -1,23 +1,23 @@
+package com.project.recipee.data.network
+
 import com.project.recipee.BuildConfig
-import com.project.recipee.data.network.ApiService
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
-import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 class ApiConfig {
 
     fun getApiService(): ApiService {
-        val httpLoggingInterceptor = if (BuildConfig.DEBUG){
+        val httpLoggingInterceptor = if (BuildConfig.DEBUG) {
             HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
-        }else(
-                HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.NONE)
-                )
+        } else {
+            HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.NONE)
+        }
 
-        val okHTTP = OkHttpClient.Builder()
+        val okHttpClient = OkHttpClient.Builder()
             .retryOnConnectionFailure(true)
             .addInterceptor(httpLoggingInterceptor)
             .addInterceptor(defaultHttpClient())
@@ -29,8 +29,7 @@ class ApiConfig {
         return Retrofit.Builder()
             .baseUrl(BuildConfig.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
-            .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
-            .client(okHTTP)
+            .client(okHttpClient)
             .build()
             .create(ApiService::class.java)
     }
@@ -43,6 +42,6 @@ class ApiConfig {
                 .build()
             return@Interceptor chain.proceed(request)
         }
-
     }
+
 }
