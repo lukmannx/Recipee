@@ -10,6 +10,7 @@
         <entry key="app/src/main/res/drawable/ic_home.xml" value="0.129" />
         <entry key="app/src/main/res/drawable/ic_home_background.xml" value="0.129" />
         <entry key="app/src/main/res/drawable/shadow.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_detail.xml" value="0.2884963768115942" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/app_bar_home.xml" value="0.2341485507246377" />

@@ -1,17 +1,12 @@
 package com.project.recipee.data.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.ListView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.Priority
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
-import com.project.recipee.R
 import com.project.recipee.data.response.RandomResponse
 import com.project.recipee.databinding.ItemFoodBinding
 
@@ -43,17 +38,17 @@ class ListFoodAdapter(private var listFood: ArrayList<RandomResponse>) : Recycle
         val food = listFood[position]
         holder.binding.apply {
             //title
-            // title dari RandomResponse
-            //itemName.text = food.title
+             //title dari RandomResponse
+            itemName.text = food.title
 
-            // photo
-//            Glide.with(itemPhoto.context)
-//                .load(food.image)
-//                .apply {RequestOptions()}
-//                .override(500,500)
-//                .diskCacheStrategy(DiskCacheStrategy.ALL)
-//                .priority(Priority.HIGH)
-//                .into(itemPhoto)
+             //photo
+            Glide.with(itemPhoto.context)
+                .load(food.image)
+                .apply {RequestOptions()}
+                .override(500,500)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .priority(Priority.HIGH)
+                .into(itemPhoto)
 
             holder.itemView.setOnClickListener{
                 onItemClickCallback?.onItemClicked(food)
