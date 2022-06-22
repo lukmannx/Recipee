@@ -17,8 +17,8 @@ data class RecipesItem(
 	@field:SerializedName("instructions")
 	val instructions: String? = null,
 
-	@field:SerializedName("analyzedInstructions")
-	val analyzedInstructions: List<AnalyzedInstructionsItem?>? = null,
+//	@field:SerializedName("analyzedInstructions")
+//	val analyzedInstructions: List<AnalyzedInstructionsItem?>? = null,
 
 	@field:SerializedName("title")
 	val title: String? = null,
