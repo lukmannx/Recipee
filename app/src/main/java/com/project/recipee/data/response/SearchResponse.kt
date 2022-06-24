@@ -23,8 +23,8 @@ data class ResultsItem(
 	@field:SerializedName("sustainable")
 	val sustainable: Boolean? = null,
 
-	@field:SerializedName("analyzedInstructions")
-	val analyzedInstructions: List<AnalyzedInstructionsItem?>? = null,
+//	@field:SerializedName("analyzedInstructions")
+//	val analyzedInstructions: List<AnalyzedInstructionsItem?>? = null,
 
 	@field:SerializedName("title")
 	val title: String? = null,

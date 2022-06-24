@@ -9,7 +9,7 @@ import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
-class ApiConfig {
+object ApiClient {
 
     fun getApiService(): ApiService {
         val httpLoggingInterceptor = if (BuildConfig.DEBUG) {
