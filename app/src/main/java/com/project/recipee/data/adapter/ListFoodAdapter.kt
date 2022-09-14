@@ -2,6 +2,7 @@ package com.project.recipee.data.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Adapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.Priority
@@ -11,8 +12,7 @@ import com.project.recipee.R
 import com.project.recipee.data.response.RandomResponse
 import com.project.recipee.databinding.ItemFoodBinding
 
-class ListFoodAdapter(private var listFood: List<RandomResponse>) :
-    RecyclerView.Adapter<ListFoodAdapter.FoodViewHolder>() {
+class ListFoodAdapter(private val listFood: List<RandomResponse>): RecyclerView.Adapter<ListFoodAdapter.FoodViewHolder>() {
 
     inner class FoodViewHolder(val binding: ItemFoodBinding) : RecyclerView.ViewHolder(binding.root)
 

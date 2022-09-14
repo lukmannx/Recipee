@@ -20,8 +20,8 @@ data class SearchResponse(
 @Parcelize
 data class ResultsItem(
 
-	@field:SerializedName("sustainable")
-	val sustainable: Boolean? = null,
+//	@field:SerializedName("sustainable")
+//	val sustainable: Boolean? = null,
 
 //	@field:SerializedName("analyzedInstructions")
 //	val analyzedInstructions: List<AnalyzedInstructionsItem?>? = null,

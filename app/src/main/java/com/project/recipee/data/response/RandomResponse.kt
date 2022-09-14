@@ -12,8 +12,6 @@ data class RandomResponse(
 	@field:SerializedName("title")
 	val title: String? = null,
 
-
-
 	@field:SerializedName("readyInMinutes")
 	val readyInMinutes: Int? = null,
 
