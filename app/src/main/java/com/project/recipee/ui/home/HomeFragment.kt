@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.project.recipee.data.response.RandomResponseItem
 import com.project.recipee.databinding.FragmentHomeBinding
@@ -45,10 +46,10 @@ class HomeFragment : Fragment() {
         }
     }
 
-    private fun showData(data: List<RandomResponseItem>?) {
+    private fun showData(data: List<RandomResponseItem?>) {
         binding.rvRecipeList.apply {
             adapter = HomeAdapter(data)
-            layoutManager = LinearLayoutManager(context)
+            layoutManager = GridLayoutManager(context, 2)
         }
     }
 }

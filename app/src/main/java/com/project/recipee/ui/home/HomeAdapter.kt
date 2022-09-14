@@ -9,7 +9,7 @@ import com.project.recipee.data.response.RandomResponse
 import com.project.recipee.data.response.RandomResponseItem
 import com.project.recipee.databinding.ItemFoodBinding
 
-class HomeAdapter(private val homeRecipe: List<RandomResponseItem>?) :
+class HomeAdapter(private val homeRecipe: List<RandomResponseItem?>) :
     RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
 
     inner class HomeViewHolder(val binding: ItemFoodBinding) : RecyclerView.ViewHolder(binding.root)
@@ -20,7 +20,7 @@ class HomeAdapter(private val homeRecipe: List<RandomResponseItem>?) :
         )
 
     override fun onBindViewHolder(holder: HomeViewHolder, position: Int) {
-        val homeList = homeRecipe?.get(position)
+        val homeList = homeRecipe[position]
         holder.binding.apply {
             itemName.text = homeList?.title
 
@@ -31,6 +31,6 @@ class HomeAdapter(private val homeRecipe: List<RandomResponseItem>?) :
     }
 
     override fun getItemCount(): Int {
-        return homeRecipe!!.size
+        return homeRecipe.size
     }
 }

@@ -5,8 +5,9 @@ import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 
 data class RandomResponse(
+
 	@field:SerializedName("recipes")
-	val randomResponse: List<RandomResponseItem>? = null
+	val randomResponse: List<RandomResponseItem?>? = null
 )
 
 data class StepsItem(
