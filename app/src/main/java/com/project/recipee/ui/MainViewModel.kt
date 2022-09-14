@@ -5,7 +5,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.project.recipee.data.network.ApiClient
 import com.project.recipee.data.response.RandomResponse
-import com.project.recipee.data.response.RandomResponseItem
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
