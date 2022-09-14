@@ -5,11 +5,11 @@ import android.view.ViewGroup
 import android.widget.Adapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.project.recipee.data.adapter.ListFoodAdapter
 import com.project.recipee.data.response.RandomResponse
+import com.project.recipee.data.response.RandomResponseItem
 import com.project.recipee.databinding.ItemFoodBinding
 
-class HomeAdapter(private val homeRecipe: List<RandomResponse>) :
+class HomeAdapter(private val homeRecipe: List<RandomResponseItem>) :
     RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
 
     inner class HomeViewHolder(val binding: ItemFoodBinding) : RecyclerView.ViewHolder(binding.root)
