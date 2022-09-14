@@ -10,6 +10,7 @@
         android:id="@+id/app_bar_home"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="15dp"
         android:background="@drawable/rounded_bottom_appbar"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -63,6 +64,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.appcompat.widget.SearchView
+        android:layout_marginTop="10dp"
         android:id="@+id/svRecipe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -70,6 +72,7 @@
         app:layout_constraintTop_toBottomOf="@id/app_bar_home" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="10dp"
         android:id="@+id/rv_recipe_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
