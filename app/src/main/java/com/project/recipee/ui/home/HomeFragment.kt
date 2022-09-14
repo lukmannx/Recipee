@@ -39,8 +39,8 @@ class HomeFragment : Fragment() {
 
         viewModel.getResultListUser().observe(viewLifecycleOwner) {
             Log.i("DATA", "onViewCreated: $it")
-            it?.let{
-                showData(it.randomResponse)
+            it?.randomResponse?.let{ data ->
+                showData(data)
             }
         }
     }

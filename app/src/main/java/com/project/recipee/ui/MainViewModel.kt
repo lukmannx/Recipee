@@ -25,9 +25,7 @@ class MainViewModel : ViewModel() {
 //                    arrayBaru.add(response.body()[i].randomResponse)
 //                }
 
-
                 Log.d("DATA", "${response.body()?.randomResponse}")
-
                 listFood.value = response.body()
             }
 

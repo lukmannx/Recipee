@@ -17,7 +17,7 @@ interface ApiService {
         @Query("apiKey") apiKey: String = BuildConfig.API_KEY
     ): Call<SearchResponse>
 
-    @GET("/recipes/random")
+    @GET("recipes/random")
     fun getRandom(
         @Query("number") number: Int = 30,
         @Query("apiKey") apiKey: String = BuildConfig.API_KEY
