@@ -3,6 +3,7 @@ package com.project.recipee
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -10,6 +11,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.project.recipee.R
 import androidx.navigation.ui.setupWithNavController
 import com.project.recipee.databinding.ActivityMainBinding
+import com.project.recipee.ui.MainViewModel
 
 class MainActivity : AppCompatActivity() {
     // inisialisasi binding
@@ -21,6 +23,17 @@ class MainActivity : AppCompatActivity() {
 
         _binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
+
+//        val viewModel = ViewModelProvider(this)[MainViewModel::class.java]
+
+//        viewModel.listFood
+//        viewModel.apply {
+//            getResultListUser().observe(this@MainActivity) {
+//                if (it == null)return@observe
+//                binding.
+//                }
+//            }
+//        }
 
         setupBottomNav()
     }

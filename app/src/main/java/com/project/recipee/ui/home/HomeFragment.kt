@@ -5,8 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.project.recipee.R
+import com.project.recipee.data.adapter.ListFoodAdapter
 import com.project.recipee.databinding.FragmentHomeBinding
 import com.project.recipee.ui.MainViewModel
 
@@ -29,5 +32,16 @@ class HomeFragment : Fragment() {
         _viewModel = ViewModelProvider(this)[MainViewModel::class.java]
 
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel.getRandomList()
+        viewModel.getResultListUser().observe(viewLifecycleOwner) {
+            binding.rvRecipeList.apply {
+                adapter = ListFoodAdapter()
+                layoutManager = LinearLayoutManager(context)
+            }
+        }
     }
 }

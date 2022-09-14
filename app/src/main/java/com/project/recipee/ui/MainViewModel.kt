@@ -1,37 +1,36 @@
 package com.project.recipee.ui
 
-import android.database.DatabaseErrorHandler
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.project.recipee.data.network.ApiClient
 import com.project.recipee.data.response.RandomResponse
-import com.project.recipee.data.response.SearchResponse
-import io.reactivex.rxjava3.schedulers.Schedulers
-import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
-
+import com.project.recipee.data.response.RandomResponseItem
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class MainViewModel : ViewModel() {
-    // inisialisasi
-    // randomresponse
-    val randomResponse = MutableLiveData<List<RandomResponse>>()
-    // searchresponse
-    val searchResponse = MutableLiveData<List<SearchResponse>>()
-    val isLoading = MutableLiveData<Boolean>()
-    val isError = MutableLiveData<Throwable>()
+    val listFood = MutableLiveData<List<RandomResponse>>()
 
-//    private fun getRandom(responHandler: (List<RandomResponse>) -> Unit, errorHandler: (Throwable) -> Unit){
-//        ApiClient.getApiService().getRandom()
-//            // subscribeOn utk menyediakan prosses async, menempatkan Api di background ata
-//            .subscribeOn(Schedulers.io())
-//            // nge get data utk menmpilkan dimana data nya akan ditampung (di )
-//            .observeOn(AndroidSchedulers.mainThread())
-//            // utk menentukan apakah akan direspon atau eror
-//            .subscribe({
-//                responHandler(it)
-//            }, {
-//                errorHandler(it)
-//            })
-//    }
+    fun getRandomList(){
+        ApiClient.getApiService().getRandom().enqueue(object : Callback<List<RandomResponse>> {
+            override fun onResponse(
+                call: Call<List<RandomResponse>>,
+                response: Response<List<RandomResponse>>
+            ) {
+//                val arrayBaru = arrayListOf<RandomResponseItem>()
+//                for (i in 0 until (response.body()!!.size)) {
+//                    arrayBaru.add(response.body()[i].randomResponse)
+//                }
+                listFood.value = response.body()
+            }
 
+            override fun onFailure(call: Call<List<RandomResponse>>, t: Throwable) {
+                TODO("Not yet implemented")
+            }
+        })
+    }
 
+    fun getResultListUser() : MutableLiveData<List<RandomResponse>> = listFood
 }
