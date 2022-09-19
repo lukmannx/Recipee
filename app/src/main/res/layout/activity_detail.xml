@@ -113,16 +113,17 @@
                             android:background="@drawable/ic_plate"/>
 
                         <TextView
-                            android:id="@+id/tv_servings"
+                            android:id="@+id/tv_servingss"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            tools:text="4"
-                            android:textStyle="bold"
-                            android:textSize="25sp"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="8dp"
                             android:textColor="@color/black"
-                            android:layout_marginHorizontal="8dp"/>
+                            android:textSize="25sp"
+                            android:textStyle="bold"
+                            tools:text="4" />
 
                         <TextView
+                            android:id="@+id/tv_servings"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/servings"
