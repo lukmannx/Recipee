@@ -43,6 +43,4 @@ object ApiClient {
             return@Interceptor chain.proceed(request)
         }
     }
-
-
 }

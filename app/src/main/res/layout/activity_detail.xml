@@ -29,7 +29,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:foreground="@drawable/shadow"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    tools:src="@tools:sample/backgrounds/scenic"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <com.google.android.material.appbar.MaterialToolbar
@@ -48,6 +49,7 @@
         android:layout_marginTop="-70dp"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
+            <!--   Deskription card     -->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cv_detail"
             android:layout_width="match_parent"

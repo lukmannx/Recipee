@@ -12,6 +12,11 @@
         tools:layout="@layout/fragment_home"/>
 
     <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.project.recipee.ui.search.SearchFragment"
+        android:label="@string/search"
+        tools:layout="@layout/fragment_search"/>
+    <fragment
         android:id="@+id/navigation_saved"
         android:name="com.project.recipee.ui.SavedFragment"
         android:label="SavedFragment"
