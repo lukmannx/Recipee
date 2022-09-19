@@ -14,7 +14,7 @@
                         android:endColor="#E6E5E8"
                         android:angle="200" />
                     <corners
-                        android:radius="19dp"/>
+                        android:radius="15dp"/>
                     <padding
                         android:left="10dp"
                         android:top="10dp"

@@ -49,7 +49,8 @@ class HomeFragment : Fragment() {
     private fun showData(data: List<RandomResponseItem?>) {
         binding.rvRecipeList.apply {
             adapter = HomeAdapter(data)
-            layoutManager = GridLayoutManager(context, 2)
+//            layoutManager = GridLayoutManager(context, 2)
+            layoutManager = LinearLayoutManager(context)
         }
     }
 }

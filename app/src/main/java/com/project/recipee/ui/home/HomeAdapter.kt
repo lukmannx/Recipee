@@ -25,6 +25,7 @@ class HomeAdapter(private val homeRecipe: List<RandomResponseItem?>) :
         val homeList = homeRecipe[position]
         holder.binding.apply {
             itemName.text = homeList?.title
+            tvHealthscoreItem.text = homeList?.healthScore.toString()
 
             Glide.with(itemPhoto)
                 .load(homeList?.image)
