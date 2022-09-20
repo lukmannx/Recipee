@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.project.recipee.data.response.MealplannerResponse
 import com.project.recipee.data.response.RandomResponseItem
 import com.project.recipee.databinding.FragmentHomeBinding
 import com.project.recipee.ui.MainViewModel
@@ -37,8 +38,20 @@ class HomeFragment : Fragment() {
 
         _viewModel = ViewModelProvider(this)[MainViewModel::class.java]
         viewModel.getRandomList()
+        viewModel.getRandomMeal()
 
-        viewModel.getResultListUser().observe(viewLifecycleOwner) {
+        val mealList = viewModel.getRandomMeal()
+        viewModel.getResultListMeal().observe(viewLifecycleOwner) {
+            binding.apply {
+                val sunday = it.week?.sunday
+                val title = sunday?.meals?.get(0)?.title
+                tvTitle1.text = title
+                tvTitle2.text = title
+                tvTitle3.text = title
+            }
+        }
+
+        viewModel.getResultListFood().observe(viewLifecycleOwner) {
             Log.i("DATA", "onViewCreated: $it")
             it?.randomResponse?.let{ data ->
                 showData(data)
