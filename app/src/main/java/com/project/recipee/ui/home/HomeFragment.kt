@@ -7,13 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.project.recipee.data.response.MealplannerResponse
 import com.project.recipee.data.response.RandomResponseItem
 import com.project.recipee.databinding.FragmentHomeBinding
-import com.project.recipee.ui.MainViewModel
-import kotlin.math.log
 
 class HomeFragment : Fragment() {
     // inisialisasi binding
@@ -40,7 +36,6 @@ class HomeFragment : Fragment() {
         viewModel.getRandomList()
         viewModel.getRandomMeal()
 
-        val mealList = viewModel.getRandomMeal()
         viewModel.getResultListMeal().observe(viewLifecycleOwner) {
             binding.apply {
                 val sunday = it.week?.sunday

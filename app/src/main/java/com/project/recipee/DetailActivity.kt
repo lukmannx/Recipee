@@ -1,14 +1,10 @@
 package com.project.recipee
 
-import android.nfc.NfcAdapter.EXTRA_DATA
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
-import com.project.recipee.data.response.RandomResponse
 import com.project.recipee.data.response.RandomResponseItem
 import com.project.recipee.databinding.ActivityDetailBinding
-import com.project.recipee.databinding.ActivityMainBinding
-import com.project.recipee.ui.MainViewModel
 
 class DetailActivity : AppCompatActivity() {
     private var _binding: ActivityDetailBinding? = null
