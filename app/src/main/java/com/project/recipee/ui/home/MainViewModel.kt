@@ -1,4 +1,4 @@
-package com.project.recipee.ui
+package com.project.recipee.ui.home
 
 import android.util.Log
 import androidx.lifecycle.LiveData

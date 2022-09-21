@@ -3,15 +3,12 @@ package com.project.recipee
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.project.recipee.R
 import androidx.navigation.ui.setupWithNavController
 import com.project.recipee.databinding.ActivityMainBinding
-import com.project.recipee.ui.MainViewModel
 
 class MainActivity : AppCompatActivity() {
     // inisialisasi binding

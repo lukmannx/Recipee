@@ -10,7 +10,6 @@ import android.widget.SearchView
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.project.recipee.databinding.FragmentSearchBinding
-import com.project.recipee.ui.MainViewModel
 
 class SearchFragment : Fragment() {
 
