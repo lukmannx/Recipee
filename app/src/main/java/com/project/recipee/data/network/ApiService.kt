@@ -2,6 +2,7 @@ package com.project.recipee.data.network
 
 import com.project.recipee.BuildConfig
 import com.project.recipee.data.response.RandomResponse
+import com.project.recipee.data.response.ResultsItem
 import com.project.recipee.data.response.SearchResponse
 import retrofit2.Call
 import retrofit2.http.GET
