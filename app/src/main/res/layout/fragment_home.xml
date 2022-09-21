@@ -7,12 +7,54 @@
     tools:context=".ui.home.HomeFragment"
     android:layout_marginVertical="10dp">
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_mealplan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/dailymeal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daily Meal"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:textSize="16sp"
+            android:text="Titile1"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:textSize="14sp"
+            android:text="Serving" />
+
+        <TextView
+            android:id="@+id/tv_serving1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="60dp"
+            android:textSize="14sp"
+            android:text="5" />
+
+    </androidx.cardview.widget.CardView>
+
     <androidx.recyclerview.widget.RecyclerView
         android:layout_marginTop="10dp"
         android:id="@+id/rv_recipe_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cv_mealplan"
         tools:listitem="@layout/item_food" />
 </androidx.constraintlayout.widget.ConstraintLayout>

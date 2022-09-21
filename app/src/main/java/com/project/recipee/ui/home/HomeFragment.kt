@@ -46,8 +46,6 @@ class HomeFragment : Fragment() {
                 val sunday = it.week?.sunday
                 val title = sunday?.meals?.get(0)?.title
                 tvTitle1.text = title
-                tvTitle2.text = title
-                tvTitle3.text = title
             }
         }
 
