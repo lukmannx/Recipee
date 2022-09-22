@@ -34,13 +34,13 @@ RecyclerView.Adapter<SearchViewHolder>(){
                 .load(searchRecipe?.image)
                 .into(ivSearch)
 
-//            root.setOnClickListener{
-//
-//                tvTitleSearch.context.startActivity(
-//                    Intent(tvTitleSearch.context, DetailActivity::class.java)
-//                        .putExtra(DetailActivity.EXTRA_DATA, searchRecipe)
-//                )
-//            }
+            root.setOnClickListener{
+
+                tvTitleSearch.context.startActivity(
+                    Intent(tvTitleSearch.context, DetailActivity::class.java)
+                        .putExtra(DetailActivity.EXTRA_DATA_1, searchRecipe)
+                )
+            }
         }
     }
 
