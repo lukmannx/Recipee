@@ -14,6 +14,7 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         _binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.elevation = 0f
 
 
         val foodList = intent.extras?.getParcelable<RandomResponseItem>(EXTRA_DATA) as RandomResponseItem

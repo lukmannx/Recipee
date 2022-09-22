@@ -11,6 +11,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.project.recipee.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
     // inisialisasi binding
     private var _binding: ActivityMainBinding? = null
     private val binding get() = _binding as ActivityMainBinding

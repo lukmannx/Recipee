@@ -32,6 +32,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         _viewModel = ViewModelProvider(this)[MainViewModel::class.java]
         viewModel.getRandomList()
         viewModel.getRandomMeal()
