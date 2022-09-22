@@ -12,7 +12,7 @@ import com.project.recipee.data.response.RandomResponseItem
 import com.project.recipee.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
-    // inisialisasi binding
+//     inisialisasi binding
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding as FragmentHomeBinding
 
@@ -40,7 +40,6 @@ class HomeFragment : Fragment() {
             binding.apply {
                 val sunday = it.week?.sunday
                 val title = sunday?.meals?.get(0)?.title
-                tvTitle1.text = title
             }
         }
 

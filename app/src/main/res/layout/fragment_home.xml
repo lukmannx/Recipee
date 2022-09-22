@@ -4,15 +4,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment"
-    android:layout_marginVertical="10dp">
+    tools:context=".ui.home.HomeFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_marginTop="10dp"
-        android:id="@+id/rv_recipe_list"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/item_food" />
+        android:layout_height="wrap_content"
+        android:background="@drawable/reccomend"
+        android:orientation="vertical"
+        android:padding="45dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Hi User"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="What Do you want To cook"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:layout_editor_absoluteX="44dp" />
+
+        <ImageView
+            android:id="@+id/img_view"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/epilepi"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.997"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.51" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_reccomend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Recommendation"
+            android:layout_marginTop="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.236"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_recipe_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/tv_reccomend"
+            tools:listitem="@layout/item_food" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
