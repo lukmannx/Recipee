@@ -16,13 +16,16 @@ class DetailActivity : AppCompatActivity() {
         setContentView(binding.root)
         supportActionBar?.hide()
 
+
         val foodList = intent.extras?.getParcelable<RandomResponseItem>(EXTRA_DATA) as RandomResponseItem
 
-        binding.tvDetailTitle.text = foodList.title
-        binding.tvServingss.text = foodList.servings.toString()
-        binding.tvMinutes.text = foodList.cookingMinutes.toString()
-        binding.tvSummary.text = foodList.summary
-        binding.tvInstruction.text = foodList.instructions
+        binding.apply {
+            tvDetailTitle.text = foodList.title
+            tvServingss.text = foodList.servings.toString()
+            tvMinutes.text = foodList.cookingMinutes.toString()
+            tvSummary.text = foodList.summary
+            tvInstruction.text = foodList.instructions
+        }
 
         Glide.with(this).load(foodList.image).into(binding.imgDetail)
 
@@ -30,5 +33,6 @@ class DetailActivity : AppCompatActivity() {
 
     companion object {
         const val EXTRA_DATA = "Food"
+        const val EXTRA_DATA_1 = "Food1"
     }
 }

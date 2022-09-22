@@ -1,6 +1,8 @@
 package com.project.recipee.data.response
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
 data class SearchResponse(
 
@@ -17,6 +19,7 @@ data class SearchResponse(
 	val results: List<ResultsItem?>? = null
 )
 
+@Parcelize
 data class ResultsItem(
 
 	@field:SerializedName("image")
@@ -30,4 +33,4 @@ data class ResultsItem(
 
 	@field:SerializedName("imageType")
 	val imageType: String? = null
-)
+) : Parcelable
