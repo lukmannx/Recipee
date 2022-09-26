@@ -12,4 +12,7 @@
     <string name="minutes">Minutes</string>
     <string name="summary">Summary</string>
     <string name="instruction">Instruction</string>
+    <string name="recipe">Recipe</string>
+    <string name="halo_user">Halo User</string>
+    <string name="hi_faiq">Hi Faiq</string>
 </resources>
