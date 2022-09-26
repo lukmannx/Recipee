@@ -7,19 +7,29 @@
     android:orientation="vertical"
     tools:context=".ui.splashscreen.SplashScreen">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_bold"
+        android:layout_marginTop="90dp"
+        android:textSize="30dp"/>
 
     <ImageView
-        android:layout_width="357dp"
+        android:layout_width="350dp"
         android:layout_height="275dp"
         android:layout_gravity="center"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/splashs" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:fontFamily="@font/fredokaone_regular"
+        android:fontFamily="@font/poppins_bold"
         android:text="Recipe"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -29,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:fontFamily="@font/fredokaone_regular"
+        android:fontFamily="@font/poppins_bold"
         android:text="Final Project"
         android:textAlignment="center"
         android:textColor="@color/black"

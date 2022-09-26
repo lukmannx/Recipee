@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".DetailActivity">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/app_bar_layout"
         android:background="@color/white">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
@@ -29,7 +29,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
-                    tools:src="@tools:sample/backgrounds/scenic"/>
+                    tools:src="@tools:sample/backgrounds/scenic" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <com.google.android.material.appbar.MaterialToolbar
@@ -37,7 +37,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:theme="?attr/actionBarTheme"
-                app:layout_collapseMode="pin"/>
+                app:layout_collapseMode="pin" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:layout_gravity="end"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                app:useMaterialThemeColors="false"
+                android:button="@drawable/ic_baseline_bookmark_border"/>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -48,15 +58,15 @@
         android:layout_marginTop="-70dp"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
-            <!--   Deskription card     -->
+        <!--   Deskription card     -->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cv_detail"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:cardCornerRadius="60dp"
-            android:elevation="3dp"
             android:clipChildren="false"
-            android:clipToPadding="false">
+            android:clipToPadding="false"
+            android:elevation="3dp"
+            app:cardCornerRadius="60dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -81,26 +91,27 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"
                     android:layout_marginTop="15dp"
-                    android:textSize="30sp"
-                    android:textStyle="bold"
                     android:fontFamily="@font/poppins_bold"
                     android:gravity="center"
-                    tools:text="Chinese Chicken Salad With Chipotle Dressing"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/btn_scroll"/>
+                    app:layout_constraintTop_toBottomOf="@id/btn_scroll"
+                    tools:text="Chinese Chicken Salad With Chipotle Dressing" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraint_detail_menu"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    app:layout_constraintTop_toBottomOf="@id/tv_detail_title"
-                    android:layout_marginVertical="30dp"
                     android:layout_marginHorizontal="10dp"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginVertical="30dp"
                     android:layout_marginBottom="40dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:orientation="horizontal">
+                    app:layout_constraintTop_toBottomOf="@id/tv_detail_title">
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -112,7 +123,7 @@
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:layout_marginTop="1dp"
-                            android:background="@drawable/ic_plate"/>
+                            android:background="@drawable/ic_plate" />
 
                         <TextView
                             android:id="@+id/tv_servingss"
@@ -129,10 +140,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/servings"
-                            android:textStyle="normal"
+                            android:textColor="@color/text_gray"
                             android:textSize="25sp"
-                            android:textColor="@color/text_gray"/>
+                            android:textStyle="normal" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -142,25 +154,25 @@
                             android:id="@+id/iv_clock"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/ic_time"/>
+                            android:background="@drawable/ic_time" />
 
                         <TextView
                             android:id="@+id/tv_minutes"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            tools:text="45"
-                            android:textStyle="bold"
-                            android:textSize="25sp"
+                            android:layout_marginHorizontal="8dp"
                             android:textColor="@color/black"
-                            android:layout_marginHorizontal="8dp"/>
+                            android:textSize="25sp"
+                            android:textStyle="bold"
+                            tools:text="45" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/minutes"
-                            android:textStyle="normal"
+                            android:textColor="@color/text_gray"
                             android:textSize="25sp"
-                            android:textColor="@color/text_gray"/>
+                            android:textStyle="normal" />
                     </LinearLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -168,18 +180,18 @@
                     android:id="@+id/iv_line"
                     android:layout_width="match_parent"
                     android:layout_height="3dp"
-                    app:layout_constraintTop_toBottomOf="@id/constraint_detail_menu"
+                    android:layout_marginTop="25dp"
                     android:background="#EEECEF"
-                    android:layout_marginTop="25dp"/>
+                    app:layout_constraintTop_toBottomOf="@id/constraint_detail_menu" />
 
                 <LinearLayout
                     android:id="@+id/ll_summary"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    app:layout_constraintTop_toBottomOf="@id/iv_line"
+                    android:layout_marginHorizontal="10dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginHorizontal="10dp">
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/iv_line">
 
                     <TextView
                         android:id="@+id/tv_summary_title"
@@ -187,26 +199,26 @@
                         android:layout_height="wrap_content"
                         android:text="@string/summary"
                         android:textSize="25sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tv_summary"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        tools:text="Chinese Chicken Salad With Chipotle Dressing ; Sugar. 15g. 17% ; Cholesterol. 113mg. 38% ; Sodium. 906mg. 39% ; Get Enough Of These. Protein. 45g ; Protein. 45g. 91%."
-                        android:textSize="20sp"
+                        android:layout_marginTop="10dp"
                         android:textColor="@color/text_gray"
-                        android:layout_marginTop="10dp"/>
+                        android:textSize="20sp"
+                        tools:text="Chinese Chicken Salad With Chipotle Dressing ; Sugar. 15g. 17% ; Cholesterol. 113mg. 38% ; Sodium. 906mg. 39% ; Get Enough Of These. Protein. 45g ; Protein. 45g. 91%." />
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/ll_instruction"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    app:layout_constraintTop_toBottomOf="@id/ll_summary"
+                    android:layout_marginHorizontal="10dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginHorizontal="10dp">
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/ll_summary">
 
                     <TextView
                         android:id="@+id/tv_instruction_title"
@@ -214,16 +226,16 @@
                         android:layout_height="wrap_content"
                         android:text="@string/instruction"
                         android:textSize="25sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tv_instruction"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        tools:text="Julienne red and yellow bell pepper, carrots, jicama and Thai basil into 1/8in thin and 2 inch long strips."
-                        android:textSize="20sp"
+                        android:layout_marginTop="10dp"
                         android:textColor="@color/text_gray"
-                        android:layout_marginTop="10dp"/>
+                        android:textSize="20sp"
+                        tools:text="Julienne red and yellow bell pepper, carrots, jicama and Thai basil into 1/8in thin and 2 inch long strips." />
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
