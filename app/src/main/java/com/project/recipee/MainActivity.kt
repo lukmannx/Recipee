@@ -1,8 +1,14 @@
 package com.project.recipee
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.Context
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
+import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -11,6 +17,8 @@ import androidx.navigation.ui.setupWithNavController
 import com.project.recipee.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private val channelId = "001"
 
     // inisialisasi binding
     private var _binding: ActivityMainBinding? = null
@@ -56,5 +64,44 @@ class MainActivity : AppCompatActivity() {
             )
         )
         setupActionBarWithNavController(navHostFragment.navController, appBarConfiguration)
+
+        createNotificationChannel()
+
+        displayNotificationStart()
+    }
+
+    private fun createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val channel = NotificationChannel(channelId, "countdown", NotificationManager.IMPORTANCE_HIGH).apply {
+                description = "Notif when countdown end."
+            }
+            val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.createNotificationChannel(channel)
+        }
+    }
+
+    private fun displayNotificationStart() {
+        val builder = NotificationCompat.Builder(this, channelId)
+
+            .setSmallIcon(R.drawable.ic_baseline_notifications)
+
+            .setContentTitle("Hi!!")
+
+            .setContentText("Welcome Brow")
+
+            .setPriority(NotificationCompat.PRIORITY_HIGH)
+
+            .setAutoCancel(true)
+
+
+
+
+        with(NotificationManagerCompat.from(this)) {
+
+            // notificationId is a unique int for each notification that you must define
+
+            notify(1, builder.build())
+
+        }
     }
 }
