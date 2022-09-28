@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
-import com.project.recipee.data.response.RandomResponseItem
 import com.project.recipee.databinding.ActivityDetailHomeBinding
 
 class DetailHome : AppCompatActivity() {
