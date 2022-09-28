@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.project.recipee.ui.home.HomeFragment"
-        android:label="HomeFragment"
+        android:label="Home"
         tools:layout="@layout/fragment_home"/>
 
     <fragment
@@ -16,9 +16,4 @@
         android:name="com.project.recipee.ui.search.SearchFragment"
         android:label="@string/search"
         tools:layout="@layout/fragment_search"/>
-    <fragment
-        android:id="@+id/navigation_saved"
-        android:name="com.project.recipee.ui.SavedFragment"
-        android:label="SavedFragment"
-        tools:layout="@layout/fragment_saved"/>
 </navigation>

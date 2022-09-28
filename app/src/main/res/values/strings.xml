@@ -12,7 +12,9 @@
     <string name="minutes">Minutes</string>
     <string name="summary">Summary</string>
     <string name="instruction">Instruction</string>
-    <string name="recipe">Recipe</string>
-    <string name="halo_user">Halo User</string>
-    <string name="hi_faiq">Hi Faiq</string>
+    <string name="home">Home</string>
+    <string name="healthscore">HealthScore</string>
+    <string name="hi_user">Hi User</string>
+    <string name="what_do_you_want_to_cook">What Do You Want To Cook?</string>
+    <string name="recommend">Recommend</string>
 </resources>

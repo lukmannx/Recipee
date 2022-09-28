@@ -20,27 +20,12 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="match_parent"
-        android:background="@drawable/bg_navigation"
+        android:background="@drawable/rec_bg_nav"
         android:layout_height="70dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginEnd="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="10dp"
+        android:elevation="10dp"
         app:menu="@menu/nav_menu"
         app:labelVisibilityMode="unlabeled"/>
-
-<!--    <nl.joery.animatedbottombar.AnimatedBottomBar-->
-<!--        android:id="@+id/bottom_bar"-->
-<!--        android:background="#FFF"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:abb_selectedTabType="text"-->
-<!--        app:abb_indicatorAppearance="round"-->
-<!--        app:abb_indicatorMargin="16dp"-->
-<!--        app:abb_indicatorHeight="4dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:abb_tabs="@menu/nav_menu"-->
-<!--        app:abb_selectedIndex="1" />-->
 </androidx.constraintlayout.widget.ConstraintLayout>

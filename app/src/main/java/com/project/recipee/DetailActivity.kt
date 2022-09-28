@@ -14,7 +14,8 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         _binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        supportActionBar?.elevation = 0f
+        setSupportActionBar(binding.toolbarDetail)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
 
         val foodList = intent.extras?.getParcelable<RandomResponseItem>(EXTRA_DATA) as RandomResponseItem
@@ -34,5 +35,10 @@ class DetailActivity : AppCompatActivity() {
     companion object {
         const val EXTRA_DATA = "Food"
         const val EXTRA_DATA_1 = "Food1"
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return super.onSupportNavigateUp()
     }
 }

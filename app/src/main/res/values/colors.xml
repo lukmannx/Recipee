@@ -20,10 +20,12 @@
     <color name="krem">#F0E3C4</color>
     <color name="soft_pink">#ECCFD1</color>
     <color name="pink">#DE5B7B</color>
+    <color name="darker_blue">#4DA093</color>
 
     <color name="white_bg">#FBFAFD</color>
 
     <color name="text_gray">#727272</color>
+    <color name="soft_gray">#E2E2E2</color>
 
 
 </resources>

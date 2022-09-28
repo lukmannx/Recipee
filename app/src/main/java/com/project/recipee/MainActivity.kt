@@ -7,6 +7,8 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuItem
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.navigation.fragment.NavHostFragment
@@ -15,6 +17,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.navigation.ui.setupWithNavController
 import com.project.recipee.databinding.ActivityMainBinding
+import com.project.recipee.ui.search.SearchFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,27 +29,37 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
 
         _binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
 
-//        val viewModel = ViewModelProvider(this)[MainViewModel::class.java]
-
-//        viewModel.listFood
-//        viewModel.apply {
-//            getResultListUser().observe(this@MainActivity) {
-//                if (it == null)return@observe
-//                binding.
-//                }
-//            }
-//        }
 
         setupBottomNav()
     }
 
+//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+//        val inflater = menuInflater
+//        inflater.inflate(R.menu.option_menu,menu)
+//        return super.onCreateOptionsMenu(menu)
+//    }
+//
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        when(item.itemId){
+//            R.id.search_button -> {
+//                supportFragmentManager.beginTransaction()
+//                    .replace(R.id.nav_host_fragment_activity_main,SearchFragment())
+//                    .addToBackStack(null)
+//                    .commit()
+//                return true
+//            }
+//        }
+//        return super.onOptionsItemSelected(item)
+//    }
+
     // set up Bottom navigation
     private fun setupBottomNav() {
-        supportActionBar?.hide()
+
 
         // hubungin dgn bottomNavigationview yg dari xml
         val navView: BottomNavigationView = binding.navView
@@ -60,7 +73,7 @@ class MainActivity : AppCompatActivity() {
             setOf(
                 // id fragment yg masuk appbar
                 R.id.navigation_home,
-                R.id.navigation_saved
+                R.id.navigation_search
             )
         )
         setupActionBarWithNavController(navHostFragment.navController, appBarConfiguration)
