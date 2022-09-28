@@ -8,12 +8,15 @@
         <entry key="app/src/main/res/drawable/bg_scroll_btn.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/glass_bg.xml" value="0.139" />
         <entry key="app/src/main/res/drawable/ic_account.xml" value="0.129" />
+        <entry key="app/src/main/res/drawable/ic_baseline_bookmark.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_baseline_bookmark_border.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_home.xml" value="0.129" />
         <entry key="app/src/main/res/drawable/ic_home_background.xml" value="0.129" />
         <entry key="app/src/main/res/drawable/ic_saved.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_search.xml" value="0.139" />
         <entry key="app/src/main/res/drawable/reccomend.xml" value="0.139" />
         <entry key="app/src/main/res/drawable/rounded_bottom_appbar.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/selector_wishlist.xml" value="0.139" />
         <entry key="app/src/main/res/drawable/shadow.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_detail.xml" value="0.2884963768115942" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
