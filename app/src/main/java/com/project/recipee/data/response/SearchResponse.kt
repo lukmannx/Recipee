@@ -29,8 +29,5 @@ data class ResultsItem(
 	val id: Int? = null,
 
 	@field:SerializedName("title")
-	val title: String? = null,
-
-	@field:SerializedName("imageType")
-	val imageType: String? = null
+	val title: String? = null
 ) : Parcelable

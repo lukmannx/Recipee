@@ -7,7 +7,6 @@ import androidx.lifecycle.ViewModel
 import com.project.recipee.data.network.ApiClient
 import com.project.recipee.data.response.MealplannerResponse
 import com.project.recipee.data.response.RandomResponse
-import com.project.recipee.data.response.RandomResponseItem
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -22,10 +21,6 @@ class MainViewModel : ViewModel() {
                 call: Call<RandomResponse>,
                 response: Response<RandomResponse>
             ) {
-//                val arrayBaru = arrayListOf<RandomResponseItem>()
-//                for (i in 0 until (response.body()!!.size)) {
-//                    arrayBaru.add(response.body()[i].randomResponse)
-//                }
 
                 Log.d("DATA", "${response.body()?.randomResponse}")
                 listFood.value = response.body()

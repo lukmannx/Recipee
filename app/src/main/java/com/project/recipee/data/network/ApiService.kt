@@ -1,10 +1,7 @@
 package com.project.recipee.data.network
 
 import com.project.recipee.BuildConfig
-import com.project.recipee.data.response.MealplannerResponse
-import com.project.recipee.data.response.RandomResponse
-import com.project.recipee.data.response.ResultsItem
-import com.project.recipee.data.response.SearchResponse
+import com.project.recipee.data.response.*
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -31,4 +28,9 @@ interface ApiService {
         @Query("apiKey") apiKey: String = BuildConfig.API_KEY
     ) : Call<MealplannerResponse>
 
+    @GET("recipes/{id}/information")
+    fun getInformation(
+        @Path("id") id: Int,
+        @Query("apiKey") apiKey: String = BuildConfig.API_KEY
+    ) : Call<RandomResponseItem>
 }

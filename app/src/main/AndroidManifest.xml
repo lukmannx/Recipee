@@ -3,7 +3,6 @@
     package="com.project.recipee">
 
     <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:allowBackup="true"
@@ -14,8 +13,7 @@
         android:theme="@style/Theme.Recipee">
         <activity
             android:name=".DetailActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Recipee.NoActionbar"/>
+            android:exported="false" />
 
         <activity
             android:name=".ui.splashscreen.SplashScreen"
@@ -28,8 +26,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            />
+            android:exported="true" />
     </application>
 
 </manifest>

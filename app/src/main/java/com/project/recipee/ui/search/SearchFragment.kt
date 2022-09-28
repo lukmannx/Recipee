@@ -19,7 +19,6 @@ class SearchFragment : Fragment() {
     private var _viewModel: SearchViewModel? = null
     private val viewModel get() = _viewModel as SearchViewModel
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

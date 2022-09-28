@@ -6,6 +6,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.project.recipee.data.network.ApiClient
+import com.project.recipee.data.response.RandomResponse
+import com.project.recipee.data.response.RandomResponseItem
 import com.project.recipee.data.response.SearchResponse
 import retrofit2.Call
 import retrofit2.Callback
@@ -21,9 +23,11 @@ class SearchViewModel : ViewModel() {
                 }
 
                 override fun onFailure(call: Call<SearchResponse>, t: Throwable) {
-                    Log.e("error", "vOnFailure: $t")
+                    Log.e("error", "OnFailure: $t")
                 }
             })
     }
+
     fun getSearchRecipe(): LiveData<SearchResponse> = listRecipe
+
 }

@@ -39,7 +39,7 @@ class HomeFragment : Fragment() {
 
         viewModel.getResultListMeal().observe(viewLifecycleOwner) {
             binding.apply {
-                val sunday = it.week?.sunday
+                val sunday = it?.week?.sunday
                 val title = sunday?.meals?.get(0)?.title
             }
         }
