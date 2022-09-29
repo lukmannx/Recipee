@@ -17,7 +17,8 @@ class DetailHome : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         _binding = ActivityDetailHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        supportActionBar?.elevation = 0f
+        setSupportActionBar(binding.toolbarDetail)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         _viewModel = ViewModelProvider(this)[DetailViewModel::class.java]
         val idRecipes : Int = when (intent.extras?.getInt(DetailHome.TYPE_DATA, 0)) {
@@ -41,6 +42,11 @@ class DetailHome : AppCompatActivity() {
     companion object {
         const val EXTRA_DATA_1 = "Food1"
         const val TYPE_DATA = "key"
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return super.onSupportNavigateUp()
     }
 }
 

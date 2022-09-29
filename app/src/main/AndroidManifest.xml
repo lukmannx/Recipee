@@ -13,7 +13,8 @@
         android:theme="@style/Theme.Recipee">
         <activity
             android:name=".DetailHome"
-            android:exported="false" />
+            android:exported="true"
+            android:theme="@style/Theme.Recipee.NoActionbar"/>
 
         <activity
             android:name=".ui.splashscreen.SplashScreen"
