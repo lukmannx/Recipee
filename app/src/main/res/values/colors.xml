@@ -11,7 +11,7 @@
     <color name="transparent">#00FFFFFF</color>
 
     //Nambah
-    <color name="cream">#F5DF99</color>
+
     <color name="Crema">#5FD068</color>
     <color name="coklat">#FFDAAF</color>
 
@@ -26,6 +26,8 @@
 
     <color name="text_gray">#727272</color>
     <color name="soft_gray">#E2E2E2</color>
+
+    <color name="cream">#FEF7F5</color>
 
 
 </resources>

@@ -17,7 +17,7 @@
             android:id="@+id/collapsing_toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:contentScrim="@color/Hijau"
+            app:contentScrim="@color/cream"
             android:fitsSystemWindows="true"
             app:collapsedTitleTextAppearance="@style/CollapsedBarTextStyle"
             app:expandedTitleTextAppearance="@style/ExpandedBarTextStyle"
@@ -32,7 +32,7 @@
                     android:id="@+id/img_detail"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
+                    android:scaleType="fitXY"
                     tools:src="@tools:sample/backgrounds/scenic"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -57,7 +57,7 @@
             android:id="@+id/cv_detail"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:cardCornerRadius="60dp"
+            app:cardCornerRadius="40dp"
             android:elevation="3dp"
             android:clipChildren="false"
             android:clipToPadding="false">

@@ -41,6 +41,8 @@ class HomeFragment : Fragment() {
             binding.apply {
                 val sunday = it?.week?.sunday
                 val title = sunday?.meals?.get(0)?.title
+
+                binding.tv2.text = title.toString()
             }
         }
 
