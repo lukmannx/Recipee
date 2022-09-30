@@ -15,8 +15,8 @@
     <string name="home">Home</string>
     <string name="healthscore">HealthScore</string>
     <string name="hi_user">Hi User</string>
-    <string name="what_do_you_want_to_cook">What Do You Want To Cook?</string>
     <string name="recommend">Recommend</string>
     <string name="daily_meal_recomendation">Daily Meal Recomendation</string>
     <string name="cocoa_protein_pancakes">Cocoa Protein Pancakes</string>
+    <string name="what_do_you_want_to_cook">What Do You Want To Cook?</string>
 </resources>
