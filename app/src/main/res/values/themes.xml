@@ -12,6 +12,10 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
+        <item name="titleTextStyle">@color/black</item>
+        <!--        ganti warna title action bar-->
+        <item name="actionBarTheme">@color/black</item>
     </style>
 
     <style name="ExpandedBarTextStyle">

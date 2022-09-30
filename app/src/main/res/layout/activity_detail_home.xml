@@ -22,7 +22,9 @@
             app:collapsedTitleTextAppearance="@style/CollapsedBarTextStyle"
             app:expandedTitleTextAppearance="@style/ExpandedBarTextStyle"
             app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
-            app:title="Recipe Detail">
+            app:title="Recipe Detail"
+            app:collapsedTitleTextColor="@color/black"
+            >
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"

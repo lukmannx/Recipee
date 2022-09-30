@@ -38,25 +38,6 @@ class MainActivity : AppCompatActivity() {
         setupBottomNav()
     }
 
-//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-//        val inflater = menuInflater
-//        inflater.inflate(R.menu.option_menu,menu)
-//        return super.onCreateOptionsMenu(menu)
-//    }
-//
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        when(item.itemId){
-//            R.id.search_button -> {
-//                supportFragmentManager.beginTransaction()
-//                    .replace(R.id.nav_host_fragment_activity_main,SearchFragment())
-//                    .addToBackStack(null)
-//                    .commit()
-//                return true
-//            }
-//        }
-//        return super.onOptionsItemSelected(item)
-//    }
-
     // set up Bottom navigation
     private fun setupBottomNav() {
 
@@ -95,15 +76,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun displayNotificationStart() {
         val builder = NotificationCompat.Builder(this, channelId)
-
-            .setSmallIcon(R.drawable.ic_baseline_notifications)
-
-            .setContentTitle("Hi!!")
-
-            .setContentText("Welcome Brow")
-
+            .setSmallIcon(R.drawable.ic_plate)
+            .setContentTitle("Welcome to Recipee")
+            .setContentText("Find the best recipe to cook")
             .setPriority(NotificationCompat.PRIORITY_HIGH)
-
             .setAutoCancel(true)
 
 
